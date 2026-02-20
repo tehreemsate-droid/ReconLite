@@ -1,0 +1,43 @@
+{
+  "target_input": "testphp.vulnweb.com",
+  "target_normalized": {
+    "host": "testphp.vulnweb.com",
+    "base_url": "https://testphp.vulnweb.com"
+  },
+  "scan_time_utc": "2026-02-19T13:40:17.517705+00:00",
+  "dns": {
+    "host": "testphp.vulnweb.com",
+    "ips": [],
+    "error": "[Errno 11002] getaddrinfo failed"
+  },
+  "http": {
+    "base_url": "https://testphp.vulnweb.com",
+    "final_url": null,
+    "status_code": null,
+    "headers": {},
+    "https": true,
+    "tried_http_fallback": true,
+    "error": "HTTPS failed: HTTPSConnectionPool(host='testphp.vulnweb.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='testphp.vulnweb.com', port=443): Failed to resolve 'testphp.vulnweb.com' ([Errno 11002] getaddrinfo failed)\")) | HTTP failed: HTTPConnectionPool(host='testphp.vulnweb.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='testphp.vulnweb.com', port=80): Failed to resolve 'testphp.vulnweb.com' ([Errno 11002] getaddrinfo failed)\"))"
+  },
+  "security_headers": {
+    "missing_headers": [
+      "content-security-policy",
+      "strict-transport-security",
+      "x-content-type-options",
+      "x-frame-options",
+      "referrer-policy",
+      "permissions-policy"
+    ],
+    "present_headers": {}
+  },
+  "common_files": {
+    "robots.txt": {
+      "error": "HTTPSConnectionPool(host='testphp.vulnweb.com', port=443): Max retries exceeded with url: /robots.txt (Caused by NameResolutionError(\"HTTPSConnection(host='testphp.vulnweb.com', port=443): Failed to resolve 'testphp.vulnweb.com' ([Errno 11002] getaddrinfo failed)\"))",
+      "found": false
+    },
+    "sitemap.xml": {
+      "error": "HTTPSConnectionPool(host='testphp.vulnweb.com', port=443): Max retries exceeded with url: /sitemap.xml (Caused by NameResolutionError(\"HTTPSConnection(host='testphp.vulnweb.com', port=443): Failed to resolve 'testphp.vulnweb.com' ([Errno 11002] getaddrinfo failed)\"))",
+      "found": false
+    }
+  }
+}

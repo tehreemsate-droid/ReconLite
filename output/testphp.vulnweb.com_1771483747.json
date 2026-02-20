@@ -1,0 +1,34 @@
+{
+  "target_input": "testphp.vulnweb.com",
+  "target_normalized": {
+    "host": "testphp.vulnweb.com",
+    "base_url": "https://testphp.vulnweb.com"
+  },
+  "scan_time_utc": "2026-02-19T06:48:59.899703+00:00",
+  "dns": {
+    "host": "testphp.vulnweb.com",
+    "ips": [
+      "44.228.249.3"
+    ],
+    "error": null
+  },
+  "http": {
+    "base_url": "https://testphp.vulnweb.com",
+    "final_url": null,
+    "status_code": null,
+    "headers": {},
+    "https": true,
+    "error": "HTTPSConnectionPool(host='testphp.vulnweb.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='testphp.vulnweb.com', port=443) at 0x13ba26a06e0>, 'Connection to testphp.vulnweb.com timed out. (connect timeout=8)'))"
+  },
+  "security_headers": {
+    "missing_headers": [
+      "content-security-policy",
+      "strict-transport-security",
+      "x-content-type-options",
+      "x-frame-options",
+      "referrer-policy",
+      "permissions-policy"
+    ],
+    "present_headers": {}
+  }
+}
