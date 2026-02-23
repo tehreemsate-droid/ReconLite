@@ -1,5 +1,7 @@
 import argparse
 import json
+import os
+from pathlib import Path
 from datetime import datetime, timezone
 from modules.dns_info import get_dns_info
 from modules.http_info import get_http_info
@@ -9,7 +11,9 @@ from utils.print_report import print_summary
 from modules.robots_check import check_common_files
 from modules.cookie_check import check_cookies
 
-def main():
+def main(BASE_DIR = Path(__file__).resolve().parent
+OUTPUT_DIR = BASE_DIR / "output"
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)):
     parser = argparse.ArgumentParser(description="Modular Recon + Safe Vulnerability Checks")
     parser.add_argument("target", help="Domain or URL (e.g., example.com or https://example.com)")
     parser.add_argument("--timeout", type=int, default=8, help="Request timeout (seconds)")
@@ -40,11 +44,11 @@ def main():
 
     print_summary(results)
     
-    out_name = f"output/{safe_filename(target['host'])}_{int(datetime.now(timezone.utc).timestamp())}.json"
+    out_name = OUTPUT_DIR / f"{target}_{timestamp}.json"
     with open(out_name, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
 
-    print(f"[+] Done. Saved: {out_name}")
+    print(f"[+] Done. Saved: {out_name.resolve()}")
 
 
 if __name__ == "__main__":
