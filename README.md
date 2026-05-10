@@ -62,7 +62,7 @@ pip install -r requirements.txt
 ## 🧪 Usage
 
 ```bash
-python3 main.py
+python3 gui_py <enter target>
 ```
 
 Enter target domain or URL through the GUI and start the reconnaissance process.
