@@ -1,54 +1,69 @@
-🚀 RECONLITE Pro v2.0|Cyber Security Suite 
+🚀 ReconLite Pro v2 .0|Cyber Security Suite 
 
-⚡ Lightweight GUI-Based Reconnaissance & Security Assessment Tool
+Lightweight GUI-Based Reconnaissance & Security Assessment Tool
 
-> Safe • Fast • Modular • Professional
-
-
+ReconLite is a lightweight GUI-based reconnaissance framework designed for safe and authorized information gathering. It helps identify public-facing target information, analyze security configurations, and generate structured reports for security assessment workflows.
 
 
 
 
-📌 OVERVIEW
+🔍 Introduction
 
-ReconLite is designed to automate the initial reconnaissance phase by collecting publicly accessible target information including DNS records, HTTP/HTTPS responses, security headers, common files, and cookie configurations.
+ReconLite automates the initial reconnaissance phase of web security assessment by collecting target intelligence such as DNS records, HTTP/HTTPS responses, security headers, exposed common files, and cookie configurations.
 
-Built for Security Researchers, Students, and Penetration Testers with a simple GUI-based workflow.
+Built with a modular and scalable architecture, ReconLite separates scanning and reporting logic into independent components, making it easier to maintain and extend.
 
-
-
-
-✨ FEATURES
-
-✅ DNS Resolution — Domain to IP Mapping
-✅ HTTP & HTTPS Support — Protocol Detection & Validation
-✅ Redirect Detection — Final URL Tracking
-✅ Server Fingerprinting — Web Server Identification
-✅ Technology Detection — Framework Discovery
-✅ Security Header Analysis — Header Validation
-✅ Missing Header Detection — Security Misconfiguration Identification
-✅ robots.txt Detection
-✅ sitemap.xml Detection
-✅ Cookie Security Inspection
-✅ JSON Report Generation
-✅ GUI-Based Interface
-✅ Modular Architecture
+The tool is designed for students, security researchers, and penetration testers who need a fast and beginner-friendly recon workflow.
 
 
 
 
-🎯 USE CASES
+🚀 Core Features
 
-✔ Web Application Reconnaissance
-✔ Security Posture Assessment
-✔ Bug Bounty Recon Phase
-✔ Learning Web Security
-✔ Initial Surface Analysis
+DNS Resolution (Domain → IP Address Mapping)
+
+HTTP & HTTPS Protocol Detection
+
+Automatic Redirect Tracking
+
+HTTP Fingerprinting & Server Identification
+
+Technology Detection (Framework Discovery)
+
+Security Headers Analysis
+
+Missing Security Header Detection
+
+robots.txt Discovery
+
+sitemap.xml Detection
+
+Cookie Security Inspection
+
+Structured JSON Report Generation
+
+GUI-Based Scanning Interface
+
+Modular & Extensible Architecture
 
 
 
 
-📦 INSTALLATION
+📂 Project Structure
+
+ReconLite/
+│
+├── gui/               # GUI components
+├── modules/           # Recon modules
+├── output/            # JSON reports
+├── main.py            # Application entry point
+├── requirements.txt   # Dependencies
+└── README.md          # Documentation
+
+
+
+
+⚙️ Installation
 
 git clone https://github.com/tehreemsate-droid/ReconLite.git
 cd ReconLite
@@ -58,33 +73,34 @@ pip install -r requirements.txt
 
 
 
+🧪 Usage
 
-▶ RUNNING RECONLITE
+Run ReconLite:
 
 python3 main.py
 
+Enter target domain or URL through the GUI and start the reconnaissance process.
 
 
 
-📄 OUTPUT REPORTS
+
+📄 Output
 
 ReconLite generates structured JSON reports inside:
 
-/output/target_scan.json
+/output/
 
-📊 REPORT INCLUDES
+Reports include:
 
-Protocol Validation (HTTP/HTTPS)
+DNS Resolution Results
 
-Redirect Tracking
+HTTP/HTTPS Status
 
-DNS Information
+Redirect Chain Information
 
-HTTP Information
+Security Header Analysis
 
-Security Header Status
-
-Common Files Discovery
+Common File Detection
 
 Cookie Analysis
 
@@ -94,41 +110,52 @@ Scan Metadata
 
 
 
-🗂 PROJECT STRUCTURE
+🎯 Use Cases
 
-ReconLite/
-├── main.py
-├── modules/
-├── gui/
-├── output/
-├── requirements.txt
-└── README.md
+Web Application Reconnaissance
 
+Initial Security Assessment
 
+Bug Bounty Recon Phase
 
+Learning Web Security Concepts
 
-⚠ SECURITY NOTICE
-
-ReconLite is intended strictly for Authorized Testing, Educational Learning, and Security Research.
-
-🚫 Do not scan unauthorized systems.
+Surface-Level Vulnerability Analysis
 
 
 
 
-🔮 FUTURE IMPROVEMENTS
 
-• Subdomain Enumeration
-• Port Scanning Integration
-• SSL/TLS Analysis
-• WHOIS Lookup
-• PDF/HTML Export Reports
-• Advanced Fingerprinting
+⚠️ Disclaimer
 
+ReconLite is intended strictly for educational purposes, research, and authorized testing only.
 
+Do not scan systems without explicit permission.
+
+Unauthorized scanning may violate legal policies.
 
 
-👨‍💻 AUTHOR
+
+
+🔮 Future Improvements
+
+Subdomain Enumeration
+
+Port Scanning Integration
+
+SSL/TLS Analysis
+
+WHOIS Lookup
+
+HTML/PDF Export Reports
+
+Advanced Fingerprinting
+
+
+
+
+
+👨‍💻 Author
 
 Tahreem
 Cyber Security & Networking Enthusiast
@@ -136,6 +163,6 @@ Cyber Security & Networking Enthusiast
 
 
 
-📜 LICENSE
+📜 License
 
-Licensed for Educational & Research Purposes.
+This project is licensed for Educational and Research Purposes.
