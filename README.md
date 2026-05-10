@@ -1,50 +1,54 @@
-🚀 ReconLite Pro v2.0|Cyber Security Suite
+🚀 RECONLITE Pro v2.0|Cyber Security Suite 
 
-> Lightweight GUI-based Reconnaissance & Security Assessment Tool for safe and authorized information gathering.
+⚡ Lightweight GUI-Based Reconnaissance & Security Assessment Tool
 
-
-
-
-
-📌 Overview
-
-ReconLite is designed to automate the initial phase of reconnaissance by collecting publicly accessible target information such as DNS records, HTTP/HTTPS details, security headers, common files, and cookie configurations.
-
-It provides a fast, lightweight, and beginner-friendly GUI interface for security researchers, students, and penetration testers.
+> Safe • Fast • Modular • Professional
 
 
 
-✨ Features
-
-✔ DNS Resolution — Domain to IP Mapping
-✔ HTTP & HTTPS Support — Automatic Protocol Handling
-✔ Redirect Detection — Tracks Final URL Path
-✔ HTTP Fingerprinting — Status Code & Server Detection
-✔ Technology Detection — Framework Identification
-✔ Security Headers Analysis
-✔ Missing Security Header Detection
-✔ robots.txt Detection
-✔ sitemap.xml Detection
-✔ Cookie Security Inspection
-✔ Structured JSON Report Generation
-✔ GUI-Based Interface
-✔ Modular Architecture (Easy to Extend)
 
 
-🎯 Use Cases
 
-Web Application Reconnaissance
+📌 OVERVIEW
 
-Security Posture Assessment
+ReconLite is designed to automate the initial reconnaissance phase by collecting publicly accessible target information including DNS records, HTTP/HTTPS responses, security headers, common files, and cookie configurations.
 
-Bug Bounty Recon Phase
-
-Learning Web Security Concepts
-
-Basic Vulnerability Surface Analysis
+Built for Security Researchers, Students, and Penetration Testers with a simple GUI-based workflow.
 
 
-📦 Installation (Kali Linux / Linux)
+
+
+✨ FEATURES
+
+✅ DNS Resolution — Domain to IP Mapping
+✅ HTTP & HTTPS Support — Protocol Detection & Validation
+✅ Redirect Detection — Final URL Tracking
+✅ Server Fingerprinting — Web Server Identification
+✅ Technology Detection — Framework Discovery
+✅ Security Header Analysis — Header Validation
+✅ Missing Header Detection — Security Misconfiguration Identification
+✅ robots.txt Detection
+✅ sitemap.xml Detection
+✅ Cookie Security Inspection
+✅ JSON Report Generation
+✅ GUI-Based Interface
+✅ Modular Architecture
+
+
+
+
+🎯 USE CASES
+
+✔ Web Application Reconnaissance
+✔ Security Posture Assessment
+✔ Bug Bounty Recon Phase
+✔ Learning Web Security
+✔ Initial Surface Analysis
+
+
+
+
+📦 INSTALLATION
 
 git clone https://github.com/tehreemsate-droid/ReconLite.git
 cd ReconLite
@@ -53,20 +57,24 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 
-▶ Running ReconLite
+
+
+▶ RUNNING RECONLITE
 
 python3 main.py
 
 
-📄 Output
 
-ReconLite generates structured JSON reports inside the output directory:
+
+📄 OUTPUT REPORTS
+
+ReconLite generates structured JSON reports inside:
 
 /output/target_scan.json
 
-Report Includes:
+📊 REPORT INCLUDES
 
-Protocol Validation (HTTP/HTTPS Status)
+Protocol Validation (HTTP/HTTPS)
 
 Redirect Tracking
 
@@ -74,7 +82,7 @@ DNS Information
 
 HTTP Information
 
-Security Headers Status
+Security Header Status
 
 Common Files Discovery
 
@@ -84,43 +92,43 @@ Scan Metadata
 
 
 
-🗂 Project Structure
+
+
+🗂 PROJECT STRUCTURE
 
 ReconLite/
 ├── main.py
 ├── modules/
-├── output/
 ├── gui/
+├── output/
 ├── requirements.txt
 └── README.md
 
 
 
-⚠ Security Notice
 
-ReconLite is intended only for authorized testing, educational learning, and research purposes.
+⚠ SECURITY NOTICE
 
-Do not scan systems without proper permission.
+ReconLite is intended strictly for Authorized Testing, Educational Learning, and Security Research.
 
-
-🔮 Future Improvements
-
-Subdomain Enumeration
-
-Port Scanning Integration
-
-SSL/TLS Analysis
-
-WHOIS Lookup
-
-PDF/HTML Export Reports
-
-Advanced Fingerprinting
+🚫 Do not scan unauthorized systems.
 
 
 
 
-👨‍💻 Author
+🔮 FUTURE IMPROVEMENTS
+
+• Subdomain Enumeration
+• Port Scanning Integration
+• SSL/TLS Analysis
+• WHOIS Lookup
+• PDF/HTML Export Reports
+• Advanced Fingerprinting
+
+
+
+
+👨‍💻 AUTHOR
 
 Tahreem
 Cyber Security & Networking Enthusiast
@@ -128,6 +136,6 @@ Cyber Security & Networking Enthusiast
 
 
 
-📜 License
+📜 LICENSE
 
-This project is licensed for educational and research purposes.
+Licensed for Educational & Research Purposes.
