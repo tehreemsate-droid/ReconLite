@@ -1,3 +1,6 @@
+from modules.vulnerability_scanner import scan_vulnerabilities
+from modules.waf_detector import detect_waf
+from modules.subdomain_scanner import find_subdomains
 import customtkinter as ctk
 import threading
 import sys
@@ -15,6 +18,7 @@ try:
         except TypeError:
             original_main() 
 except ImportError:
+
     def start_recon(target): print(f"[!] Core module app.py missing.")
 
 class TerminalRedirector:
@@ -24,8 +28,34 @@ class TerminalRedirector:
         self.text_widget.insert("end", string)
         self.text_widget.see("end")
         self.text_widget.update_idletasks()
-    def flush(self): pass
+    def flush(self): pas
 
+# 2. Is naye start_recon function ko purane wale ki jagah replace karein
+def start_recon(target):
+    if not target:
+        print("[!] Error: Please enter a target URL/Domain.")
+        return
+
+    print(f"\n{'='*50}")
+    print(f"[*] Starting Professional Reconnaissance on: {target}")
+    print(f"{'='*50}\n")
+
+    # Clean the target for subdomain scanning (remove http/https)
+    domain_only = target.replace("https://", "").replace("http://", "").split("/")[0]
+
+    # --- FEATURE 1: WAF DETECTION ---
+    print("[*] Stage 1: Identifying Firewall (WAF)...")
+    waf_result = detect_waf(target)
+    print(f"{waf_result}")
+
+    # --- FEATURE 2: SUBDOMAIN ENUMERATION ---
+    print("\n[*] Stage 2: Enumerating Subdomains (Passive Scan)...")
+    sub_result = find_subdomains(domain_only)
+    print(f"{sub_result}")
+
+    print(f"\n{'-'*50}")
+    print("[+] Reconnaissance Phase Complete.")
+    print(f"{'-'*50}\n")
 class ReconLiteUltra(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -98,3 +128,6 @@ class ReconLiteUltra(ctk.CTk):
 if __name__ == "__main__":
     app = ReconLiteUltra()
     app.mainloop()
+print("\n[*] Stage 3: Scanning for Vulnerabilities...")
+vuln_info = scan_vulnerabilities(target)
+print(vuln_info)
