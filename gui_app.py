@@ -131,3 +131,11 @@ if __name__ == "__main__":
 print("\n[*] Stage 3: Scanning for Vulnerabilities...")
 vuln_info = scan_vulnerabilities(target)
 print(vuln_info)
+# --- STAGE 3: VULNERABILITY SCANNING ---
+print("\n[*] Stage 3: Scanning for Vulnerabilities (Sensitive Files)...")
+
+# Is function ko call karein (Jo humne pehle modules mein banaya tha)
+vuln_results = scan_vulnerabilities(target)
+
+# Result ko print karein taakay wo GUI mein nazar aaye
+print(vuln_results)
