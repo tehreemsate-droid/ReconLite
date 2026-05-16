@@ -15,33 +15,17 @@ class TerminalRedirector:
         self.text_widget.see("end")
         self.text_widget.update_idletasks()
     def flush(self):
-        pass
-
+  
 # --- MAIN LOGIC FUNCTION ---
 def start_recon(target):
     if not target or target == "https://":
-        print("[!] Error: Please enter a valid target URL.")
+        print("[!] Error: Please enter a valid target URL/Domain.")
         return
 
-    domain_only = target.replace("https://", "").replace("http://", "").split("/")[0]
+    print(f"\n{'='*60}")
+    print(f"[*] INITIALIZING PRO-RECON ON: {target}")
+    print(f"{'='*60}\n")
 
-    # STAGE 1
-    print("\n[*] Stage 1: Identifying Firewall (WAF)...")
-    print(detect_waf(target))
-
-    # STAGE 2
-    print("\n[*] Stage 2: Enumerating Subdomains...")
-    # Naya wala result yahan print hoga
-    sub_results = find_subdomains(domain_only)
-    print(sub_results)
-
-    # STAGE 3
-    print("\n[*] Stage 3: Scanning for Vulnerabilities...")
-    # Naya wala result yahan print hoga
-    vuln_results = scan_vulnerabilities(target)
-    print(vuln_results)
-
-    print("\n[+] Professional Reconnaissance Phase Complete.")
     # Domain nikalne ki logic (e.g., google.com)
     domain_only = target.replace("https://", "").replace("http://", "").split("/")[0]
 

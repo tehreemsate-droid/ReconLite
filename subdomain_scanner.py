@@ -1,33 +1,25 @@
 import requests
-import re
 
 def find_subdomains(domain):
-    print(f"\n[*] Enumerating subdomains for: {domain}")
-    subdomains = set()
-    
-    # Using crt.sh (Passive Enumeration - Industry Standard)
+    print(f"[*] Fetching subdomains for {domain} from public archives...")
     url = f"https://crt.sh/?q=%.{domain}&output=json"
+    subdomains = set()
     
     try:
         response = requests.get(url, timeout=15)
         if response.status_code == 200:
             data = response.json()
             for entry in data:
-                name = entry['name_value']
-                # Cleaning the output
-                if "\n" in name:
-                    parts = name.split("\n")
-                    for p in parts:
-                        subdomains.add(p.replace("*.", ""))
-                else:
-                    subdomains.add(name.replace("*.", ""))
+                subdomains.add(entry['name_value'].replace("*.", ""))
         
-        # Displaying top 10 unique subdomains
-        results = sorted(list(subdomains))[:10]
-        if results:
-            return f"[+] Found {len(subdomains)} subdomains. Top results: " + ", ".join(results)
-        else:
-            return "[-] No subdomains found via passive scan."
+        # Sirf top 15-20 unique results dikhayenge taakay screen bhar jaye par kachra na ho
+        results = sorted(list(subdomains))[:20] 
+        
+        report = "\n--- [ SUBDOMAIN REPORT ] ---\n"
+        for sub in results:
+            report += f"|-- [FOUND] {sub}\n"
+        
+        return report if results else "[-] No subdomains found."
             
     except Exception as e:
-        return f"[-] Subdomain Scan Error: {str(e)}"
+        return f"[-] Subdomain Error: {str(e)}"
